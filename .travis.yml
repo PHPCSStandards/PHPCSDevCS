@@ -1,0 +1,42 @@
+dist: trusty
+
+language: php
+
+## Cache composer and apt downloads.
+cache:
+  apt: true
+  directories:
+    # Cache directory for older Composer versions.
+    - $HOME/.composer/cache/files
+    # Cache directory for more recent Composer versions.
+    - $HOME/.cache/composer/files
+
+php:
+  - 7.4
+
+addons:
+  apt:
+    packages:
+      - libxml2-utils
+
+
+before_install:
+  # Speed up build time by disabling Xdebug when its not needed.
+  - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
+
+  - export XMLLINT_INDENT="    "
+
+  # --prefer-dist will allow for optimal use of the travis caching ability.
+  - composer install --prefer-dist --no-suggest
+
+script:
+  # Validate the xml file.
+  # @link http://xmlsoft.org/xmllint.html
+  - xmllint --noout --schema ./vendor/squizlabs/php_codesniffer/phpcs.xsd ./PHPCSDev/ruleset.xml
+
+  # Check the code-style consistency of the xml files.
+  - diff -B ./PHPCSDev/ruleset.xml <(xmllint --format "./PHPCSDev/ruleset.xml")
+
+  # Validate the composer.json file on low/high PHP versions.
+  # @link https://getcomposer.org/doc/03-cli.md#validate
+  - composer validate --no-check-all --strict

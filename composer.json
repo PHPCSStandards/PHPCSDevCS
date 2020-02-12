@@ -1,0 +1,31 @@
+{
+    "name" : "phpcsstandards/phpcsdevcs",
+    "description" : "Sane ruleset for the code in external standards for PHP_CodeSniffer.",
+    "type" : "phpcodesniffer-standard",
+    "keywords" : [ "phpcs", "php_codesniffer", "phpcodesniffer-standard" ],
+    "license" : "LGPL-3.0-or-later",
+    "authors" : [
+        {
+            "name" : "Juliette Reinders Folmer",
+            "role" : "lead",
+            "homepage" : "https://github.com/jrfnl"
+        },
+        {
+            "name" : "Contributors",
+            "homepage" : "https://github.com/PHPCSStandards/PHPCSDevCS/graphs/contributors"
+        }
+    ],
+    "support" : {
+        "issues" : "https://github.com/PHPCSStandards/PHPCSDevCS/issues",
+        "source" : "https://github.com/PHPCSStandards/PHPCSDevCS"
+    },
+    "require" : {
+        "php" : ">=5.4",
+        "squizlabs/php_codesniffer" : "^3.5.0",
+        "phpcompatibility/php-compatibility" : "^9.0.0",
+        "dealerdirect/phpcodesniffer-composer-installer" : "^0.3 || ^0.4.1 || ^0.5 || ^0.6.2"
+    },
+    "require-dev" : {
+        "roave/security-advisories" : "dev-master"
+    }
+}
