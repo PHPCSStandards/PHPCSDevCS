@@ -210,7 +210,10 @@
     </rule>
 
     <!-- Clean up: remove redundant code. -->
-    <rule ref="Squiz.PHP.NonExecutableCode"/>
+    <rule ref="Squiz.PHP.NonExecutableCode">
+        <!-- Allow for return statement in otherwise empty function. -->
+        <exclude name="Squiz.PHP.NonExecutableCode.ReturnNotRequired"/>
+    </rule>
 
     <!-- Clean up: no empty statements. -->
     <rule ref="Generic.CodeAnalysis.EmptyPHPStatement"/>
