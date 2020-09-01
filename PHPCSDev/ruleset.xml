@@ -131,6 +131,9 @@
     ####################################################################
     -->
 
+    <!-- Enforce short array syntax. -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
     <!-- Use normalized array indentation. -->
     <rule ref="Generic.Arrays.ArrayIndent"/>
     <rule ref="Squiz.Arrays.ArrayDeclaration"/>
