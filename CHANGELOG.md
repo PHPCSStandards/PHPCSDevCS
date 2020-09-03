@@ -10,6 +10,12 @@ This projects adheres to [Keep a CHANGELOG](http://keepachangelog.com/) and uses
 _Nothing yet._
 
 
+## 1.1.1 - 2020-09-03
+
+### Changed
+- The few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` and `PHPCompatibility.Constants.RemovedConstants` sniffs are excluded as the constants are, or soon will be, backfilled by PHPCS.
+- Updated the version constraints for the [PHPCompatibility] standard to allow for installing version `10.0` (currently in dev).
+
 ## 1.1.0 - 2020-09-03
 
 ### Added
@@ -26,6 +32,8 @@ _Nothing yet._
 Initial release.
 
 [Dealerdirect Composer PHPCS plugin]: https://github.com/Dealerdirect/phpcodesniffer-composer-installer/
+[PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
 
-[Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.0.0...1.1.0
