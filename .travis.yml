@@ -1,5 +1,3 @@
-dist: trusty
-
 language: php
 
 ## Cache composer and apt downloads.
@@ -27,7 +25,7 @@ before_install:
   - export XMLLINT_INDENT="    "
 
   # --prefer-dist will allow for optimal use of the travis caching ability.
-  - composer install --prefer-dist --no-suggest
+  - travis_retry composer install --prefer-dist --no-suggest
 
 script:
   # Validate the xml file.
