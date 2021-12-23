@@ -27,5 +27,10 @@
     },
     "require-dev" : {
         "roave/security-advisories" : "dev-master"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
