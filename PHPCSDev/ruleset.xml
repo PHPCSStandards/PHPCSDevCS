@@ -46,6 +46,10 @@
         <!-- Allow for the first condition of a multi-line control structure to be on the same line
              as the control structure keyword. -->
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
+
+        <!-- This standard enforces a blank line before each function, which conflicts with this
+             PHPCS 3.6.2+ PSR12 sniff when a function is the first content of a class. -->
+        <exclude name="PSR12.Classes.OpeningBraceSpace.Found"/>
     </rule>
 
 
