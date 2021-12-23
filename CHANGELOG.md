@@ -10,6 +10,15 @@ This projects adheres to [Keep a CHANGELOG](http://keepachangelog.com/) and uses
 _Nothing yet._
 
 
+## 1.1.3 - 2021-12-23
+
+### Changed
+- Updated the version constraints for [PHP_CodeSniffer] to `^3.6.2`.
+- CI is now running on GitHub Actions.
+
+### Fixed
+- To prevent conflicting expectations between a newly introduced PSR12 sniff and this ruleset as it was, the new `PSR12.Classes.OpeningBraceSpace` sniff will be ignored.
+
 ## 1.1.2 - 2020-12-01
 
 ### Changed
@@ -37,9 +46,11 @@ _Nothing yet._
 Initial release.
 
 [Dealerdirect Composer PHPCS plugin]: https://github.com/Dealerdirect/phpcodesniffer-composer-installer/
+[PHP_CodeSniffer]: https://github.com/squizlabs/php_codesniffer/
 [PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/master...HEAD
+[1.1.3]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.2...1.1.3
 [1.1.2]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.0.0...1.1.0
