@@ -44,7 +44,7 @@ composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-instal
 composer global require --dev phpcsstandards/phpcsdevcs:"^1.0"
 ```
 
-Composer will automatically install dependencies and register the PHPCSDev and other external standards with PHP_CodeSniffer using the [DealerDirect Composer PHPCS plugin](https://github.com/Dealerdirect/phpcodesniffer-composer-installer/).
+Composer will automatically install dependencies and register the PHPCSDev and other external standards with PHP_CodeSniffer using the [Composer PHPCS plugin](https://github.com/PHPCSStandards/composer-installer).
 
 
 PHPCSDev ruleset for sniff repos

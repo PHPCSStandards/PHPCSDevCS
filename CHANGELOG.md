@@ -38,14 +38,14 @@ _Nothing yet._
 ### Changed
 - The `Squiz.PHP.NonExecutableCode.ReturnNotRequired` code is excluded to allow for a `return` statement in an otherwise empty function (typical use: overloadable methods in an abstract class).
 - The `PHPCompatibility.Constants.NewConstants.t_fnFound` code is excluded as the constant is backfilled by PHPCS since PHPCS 3.5.3.
-- Updated the version constraints for the [Dealerdirect Composer PHPCS plugin]. The minimum supported version is now `0.4.1`, while the maximum is `^0.7` (latest release).
+- Updated the version constraints for the [Composer PHPCS plugin]. The minimum supported version is now `0.4.1`, while the maximum is `^0.7` (latest release).
 - Updated the inline ruleset documentation.
 
 ## 1.0.0 - 2020-02-12
 
 Initial release.
 
-[Dealerdirect Composer PHPCS plugin]: https://github.com/Dealerdirect/phpcodesniffer-composer-installer/
+[Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer
 [PHP_CodeSniffer]: https://github.com/squizlabs/php_codesniffer/
 [PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
 
