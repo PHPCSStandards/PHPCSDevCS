@@ -32,6 +32,7 @@ Installation
 
 Run the following from the root of your project:
 ```bash
+composer config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 composer require --dev phpcsstandards/phpcsdevcs:"^1.0"
 ```
 
@@ -39,6 +40,7 @@ composer require --dev phpcsstandards/phpcsdevcs:"^1.0"
 
 If you work on several different sniff repos, you may want to install this toolset globally:
 ```bash
+composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 composer global require --dev phpcsstandards/phpcsdevcs:"^1.0"
 ```
 
