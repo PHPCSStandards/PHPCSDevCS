@@ -4,12 +4,12 @@ PHPCSDevCS for developers of PHP_CodeSniffer sniffs
 [![Latest Stable Version](https://poser.pugx.org/phpcsstandards/phpcsdevcs/v/stable)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
 [![Release Date of the Latest Version](https://img.shields.io/github/release-date/PHPCSStandards/PHPCSDevCS.svg?maxAge=1800)](https://github.com/PHPCSStandards/PHPCSDevCS/releases)
 :construction:
-[![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--master-e68718.svg?maxAge=2419200)](https://packagist.org/packages/phpcsstandards/phpcsdevcs#dev-master)
-[![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/workflows/CI/badge.svg?branch=master)](https://github.com/PHPCSStandards/PHPCSDevCS/actions)
-[![Last Commit to Unstable](https://img.shields.io/github/last-commit/PHPCSStandards/PHPCSDevCS/master.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/commits/master)
+[![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--main-e68718.svg?maxAge=2419200)](https://packagist.org/packages/phpcsstandards/phpcsdevcs#dev-main)
+[![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/workflows/CI/badge.svg?branch=main)](https://github.com/PHPCSStandards/PHPCSDevCS/actions)
+[![Last Commit to Unstable](https://img.shields.io/github/last-commit/PHPCSStandards/PHPCSDevCS/main.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/commits/main)
 
 [![Minimum PHP Version](https://img.shields.io/packagist/php-v/phpcsstandards/phpcsdevcs.svg?maxAge=3600)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
-[![License: LGPLv3](https://poser.pugx.org/phpcsstandards/phpcsdevcs/license)](https://github.com/PHPCSStandards/PHPCSDevCS/blob/master/LICENSE)
+[![License: LGPLv3](https://poser.pugx.org/phpcsstandards/phpcsdevcs/license)](https://github.com/PHPCSStandards/PHPCSDevCS/blob/main/LICENSE)
 ![Awesome](https://img.shields.io/badge/awesome%3F-yes!-brightgreen.svg)
 
 
@@ -91,7 +91,7 @@ Add the following line to your project's `phpcs.xml.dist` file:
 
 Contributing
 -------
-Contributions to this project are welcome. Just clone the repo, branch off from `master`, make your changes, commit them and send in a pull request.
+Contributions to this project are welcome. Just clone the repo, branch off from `main`, make your changes, commit them and send in a pull request.
 
 If unsure whether the changes you are proposing would be welcome, open an issue first to discuss your proposal.
 
