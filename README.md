@@ -5,7 +5,7 @@ PHPCSDevCS for developers of PHP_CodeSniffer sniffs
 [![Release Date of the Latest Version](https://img.shields.io/github/release-date/PHPCSStandards/PHPCSDevCS.svg?maxAge=1800)](https://github.com/PHPCSStandards/PHPCSDevCS/releases)
 :construction:
 [![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--main-e68718.svg?maxAge=2419200)](https://packagist.org/packages/phpcsstandards/phpcsdevcs#dev-main)
-[![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/workflows/CI/badge.svg?branch=main)](https://github.com/PHPCSStandards/PHPCSDevCS/actions)
+[![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml/badge.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml)
 [![Last Commit to Unstable](https://img.shields.io/github/last-commit/PHPCSStandards/PHPCSDevCS/main.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/commits/main)
 
 [![Minimum PHP Version](https://img.shields.io/packagist/php-v/phpcsstandards/phpcsdevcs.svg?maxAge=3600)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
