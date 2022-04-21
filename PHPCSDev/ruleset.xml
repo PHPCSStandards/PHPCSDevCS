@@ -29,6 +29,8 @@
         <exclude name="PHPCompatibility.Constants.NewConstants.t_name_fully_qualifiedFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_name_qualifiedFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_name_relativeFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_readonlyFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_enumFound"/>
         <exclude name="PHPCompatibility.Constants.RemovedConstants.t_bad_characterFound"/>
     </rule>
 
