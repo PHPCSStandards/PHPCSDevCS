@@ -10,7 +10,16 @@ This projects adheres to [Keep a CHANGELOG](http://keepachangelog.com/) and uses
 _Nothing yet._
 
 
-## 1.1.3 - 2021-12-23
+## [1.1.4] - 2022-04-21
+
+### Changed
+- A few PHP 8.1 token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff have been excluded as the constants have been backfilled by PHPCS.
+- README: Updated the installation instructions for [compatibility with Composer 2.2][composer22announce].
+- Various other housekeeping and minor documentation updates.
+
+[composer22announce]: https://blog.packagist.com/composer-2-2/#more-secure-plugin-execution
+
+## [1.1.3] - 2021-12-23
 
 ### Changed
 - Updated the version constraints for [PHP_CodeSniffer] to `^3.6.2`.
@@ -19,18 +28,18 @@ _Nothing yet._
 ### Fixed
 - To prevent conflicting expectations between a newly introduced PSR12 sniff and this ruleset as it was, the new `PSR12.Classes.OpeningBraceSpace` sniff will be ignored.
 
-## 1.1.2 - 2020-12-01
+## [1.1.2] - 2020-12-01
 
 ### Changed
-- The few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff are excluded as the constants have been backfilled by PHPCS.
+- A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff are excluded as the constants have been backfilled by PHPCS.
 
-## 1.1.1 - 2020-09-03
+## [1.1.1] - 2020-09-03
 
 ### Changed
-- The few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` and `PHPCompatibility.Constants.RemovedConstants` sniffs are excluded as the constants are, or soon will be, backfilled by PHPCS.
+- A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` and `PHPCompatibility.Constants.RemovedConstants` sniffs are excluded as the constants are, or soon will be, backfilled by PHPCS.
 - Updated the version constraints for the [PHPCompatibility] standard to allow for installing version `10.0` (currently in dev).
 
-## 1.1.0 - 2020-09-03
+## [1.1.0] - 2020-09-03
 
 ### Added
 - Short array syntax is now required by default via the `Generic.Arrays.DisallowLongArraySyntax` sniff.
@@ -50,6 +59,7 @@ Initial release.
 [PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/master...HEAD
+[1.1.4]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.2...1.1.3
 [1.1.2]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.0...1.1.1
