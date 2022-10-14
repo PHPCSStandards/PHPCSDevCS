@@ -64,7 +64,7 @@ Initial release.
 [PHP_CodeSniffer]: https://github.com/squizlabs/php_codesniffer/
 [PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
 
-[Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/master...HEAD
+[Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/main...HEAD
 [1.1.5]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.2...1.1.3

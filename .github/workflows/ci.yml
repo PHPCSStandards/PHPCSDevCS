@@ -4,7 +4,7 @@ on:
   # Run on all pushes and pull requests.
   push:
     branches:
-      - master
+      - main
   pull_request:
   # Also run this workflow on day 10 of every month as the repo isn't that active.
   schedule:
