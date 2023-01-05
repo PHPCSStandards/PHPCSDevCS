@@ -23,7 +23,7 @@
         "php" : ">=5.4",
         "squizlabs/php_codesniffer" : "^3.6.2",
         "phpcompatibility/php-compatibility" : "^9.0.0 || ^10.0.0",
-        "dealerdirect/phpcodesniffer-composer-installer" : "^0.4.1 || ^0.5 || ^0.6.2 || ^0.7"
+        "dealerdirect/phpcodesniffer-composer-installer" : "^0.4.1 || ^0.5 || ^0.6.2 || ^0.7 || ^1.0"
     },
     "require-dev" : {
         "roave/security-advisories" : "dev-master"
