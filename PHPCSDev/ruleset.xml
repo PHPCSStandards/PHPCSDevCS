@@ -81,6 +81,13 @@
     ####################################################################
     -->
 
+    <!-- PSR12 doesn't enforce consistency in where boolean operators are placed. We do. -->
+    <rule ref="PSR12.ControlStructures.BooleanOperatorPlacement">
+        <properties>
+            <property name="allowOnly" value="first"/>
+        </properties>
+    </rule>
+
     <!-- PSR12 appears to ignore blank lines for superfluous whitespace and in several other places. Let's fix that. -->
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
         <properties>
