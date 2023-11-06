@@ -13,7 +13,7 @@ PHPCSDevCS for developers of PHP_CodeSniffer sniffs
 ![Awesome](https://img.shields.io/badge/awesome%3F-yes!-brightgreen.svg)
 
 
-This is an external ruleset for [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) intended for use by sniff developers.
+This is an external ruleset for [PHP CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) intended for use by sniff developers.
 
 * [Installation](#installation)
     + [Composer Project-based Installation](#composer-project-based-installation)

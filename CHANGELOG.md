@@ -66,8 +66,8 @@ _Nothing yet._
 Initial release.
 
 [Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer
-[PHP_CodeSniffer]: https://github.com/squizlabs/php_codesniffer/
-[PHPCompatibility]: https://github.com/PHPCompatibility/PHPCompatibility
+[PHP_CodeSniffer]:       https://github.com/PHPCSStandards/php_codesniffer/
+[PHPCompatibility]:      https://github.com/PHPCompatibility/PHPCompatibility
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/main...HEAD
 [1.1.6]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.5...1.1.6
