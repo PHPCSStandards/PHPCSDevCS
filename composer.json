@@ -1,6 +1,6 @@
 {
     "name" : "phpcsstandards/phpcsdevcs",
-    "description" : "Sane ruleset for the code in external standards for PHP_CodeSniffer.",
+    "description" : "Coding Standards ruleset for the code in external standards for PHP_CodeSniffer.",
     "type" : "phpcodesniffer-standard",
     "keywords" : [ "phpcs", "static analysis", "php_codesniffer", "phpcodesniffer-standard" ],
     "license" : "LGPL-3.0-or-later",
