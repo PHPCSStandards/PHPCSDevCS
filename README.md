@@ -52,7 +52,7 @@ PHPCSDev ruleset for sniff repos
 
 Once this project is installed, you will see a new `PHPCSDev` ruleset in the list of installed standards when you run `phpcs -i`.
 
-**Important: This ruleset currently requires PHP_CodeSniffer >= `3.6.2+`.**
+**Important: This ruleset currently requires PHP_CodeSniffer >= `3.13.0+`.**
 
 > As sniffs developers will mostly work with the latest version of PHP_CodeSniffer, this shouldn't cause any problems.
 >
