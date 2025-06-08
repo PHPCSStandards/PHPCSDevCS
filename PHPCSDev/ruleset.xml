@@ -119,6 +119,9 @@
     <!-- No spacing on the inside of arbitrary parentheses. -->
     <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing"/>
 
+    <!-- No spacing inside heredoc/nowdocs identifiers. -->
+    <rule ref="Generic.WhiteSpace.HereNowdocIdentifierSpacing"/>
+
     <!-- Align the equal operator in assignment blocks. -->
     <rule ref="Generic.Formatting.MultipleStatementAlignment">
         <properties>
@@ -225,6 +228,9 @@
     <!-- Efficiency: don't unnecessarily use double quotes. -->
     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
 
+    <!-- Efficiency: don't unnecessarily use heredocs. -->
+    <rule ref="Generic.Strings.UnnecessaryHeredoc"/>
+
     <!-- Error prevention: warns when an inner loop uses the same incrementor as the outer loop. -->
     <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
 
@@ -232,6 +238,9 @@
     <rule ref="Generic.CodeAnalysis.AssignmentInCondition">
         <exclude name="Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition"/>
     </rule>
+
+    <!-- Error prevention: use parentheses when mixing boolean operators. -->
+    <rule ref="Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence"/>
 
     <!-- Clean up: remove redundant code. -->
     <rule ref="Squiz.PHP.NonExecutableCode">
