@@ -24,6 +24,7 @@
         <exclude name="PHPCompatibility.Constants.NewConstants.t_yield_fromFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_bad_characterFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_fnFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_attributeFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_matchFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_nullsafe_object_operatorFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_name_fully_qualifiedFound"/>
