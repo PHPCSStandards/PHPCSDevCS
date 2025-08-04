@@ -31,6 +31,9 @@
         <exclude name="PHPCompatibility.Constants.NewConstants.t_name_relativeFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_readonlyFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_enumFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_public_setFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_protected_setFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_private_setFound"/>
         <exclude name="PHPCompatibility.Constants.RemovedConstants.t_bad_characterFound"/>
     </rule>
 
