@@ -151,6 +151,11 @@
     <!-- Only one object structure per file. -->
     <rule ref="Generic.Files.OneObjectStructurePerFile"/>
 
+    <!-- Disallow non-strict comparisons and the use of the not operator. -->
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage">
+        <exclude name="Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue"/>
+    </rule>
+
 
     <!--
     ####################################################################
