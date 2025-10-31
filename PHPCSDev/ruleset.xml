@@ -41,6 +41,15 @@
 
     <!--
     ####################################################################
+    PHP: Modernize a codebase when possible.
+    ####################################################################
+    -->
+
+    <rule ref="Modernize.FunctionCalls.Dirname.FileConstant"/>
+
+
+    <!--
+    ####################################################################
     Code style: Check style for compliance with PSR12.
     ####################################################################
     -->
@@ -81,17 +90,40 @@
         </properties>
     </rule>
 
+    <!-- Prevent PHP 8 named parameters confusion. -->
+    <rule ref="Universal.NamingConventions.NoReservedKeywordParameterNames"/>
+
 
     <!--
     ####################################################################
     Code style: Various other additions.
+    Some of these rules will probably be enforced via PERCS once it is available, but we already want to use them.
     ####################################################################
     -->
+
+    <!-- Enforce lowercase PHP tags. -->
+    <rule ref="Universal.PHP.LowercasePHPTag"/>
+
+    <!-- Enforce consistency in import use statements. -->
+    <rule ref="Universal.UseStatements.NoLeadingBackslash"/>
+    <rule ref="Universal.UseStatements.KeywordSpacing"/>
+    <rule ref="Universal.UseStatements.LowercaseFunctionConst"/>
+
+    <!-- Consistent modifier keyword order. PSR12 currently only enforces this for property declarations. -->
+    <rule ref="Universal.Classes.ModifierKeywordOrder"/>
+    <rule ref="Universal.Constants.ModifierKeywordOrder"/>
 
     <!-- PSR12 doesn't enforce consistency in where boolean operators are placed. We do. -->
     <rule ref="PSR12.ControlStructures.BooleanOperatorPlacement">
         <properties>
             <property name="allowOnly" value="first"/>
+        </properties>
+    </rule>
+
+    <!-- Same thing, but then for multi-line concatenation in statements. -->
+    <rule ref="Universal.Operators.ConcatPosition">
+        <properties>
+            <property name="allowOnly" value="start"/>
         </properties>
     </rule>
 
@@ -129,6 +161,23 @@
     <!-- No spacing inside heredoc/nowdocs identifiers. -->
     <rule ref="Generic.WhiteSpace.HereNowdocIdentifierSpacing"/>
 
+    <!-- No spaces around type operators. -->
+    <rule ref="Universal.Operators.TypeSeparatorSpacing"/>
+
+    <!-- Always use parentheses when instantiating anonymous classes. -->
+    <rule ref="Universal.Classes.RequireAnonClassParentheses"/>
+
+    <!-- No space between the class keyword and the open parentheses for anonymous classes. -->
+    <rule ref="Universal.WhiteSpace.AnonClassKeywordSpacing"/>
+
+    <!-- Enforce consistent spacing around commas (no space before, one space or new line after). -->
+    <rule ref="Universal.WhiteSpace.CommaSpacing">
+        <exclude name="Universal.WhiteSpace.CommaSpacing.TooMuchSpaceAfterCommaBeforeTrailingComment"/>
+    </rule>
+
+    <!-- Disallow precision alignment (indentation). -->
+    <rule ref="Universal.WhiteSpace.PrecisionAlignment"/>
+
     <!-- Align the equal operator in assignment blocks. -->
     <rule ref="Generic.Formatting.MultipleStatementAlignment">
         <properties>
@@ -148,16 +197,45 @@
     <!-- Disallow Yoda conditions. -->
     <rule ref="Generic.ControlStructures.DisallowYodaConditions"/>
 
+    <!-- Disallow alternative syntax for control structures. -->
+    <rule ref="Universal.ControlStructures.DisallowAlternativeSyntax"/>
+
     <!-- Use self or static when referring to the class in use. -->
     <rule ref="Squiz.Classes.SelfMemberReference"/>
+    <rule ref="Universal.CodeAnalysis.StaticInFinalClass"/>
+
+    <!-- Only one namespace per file. -->
+    <rule ref="Universal.Namespaces.OneDeclarationPerFile"/>
+
+    <!-- Don't allow curly brace syntax for namespace declarations. -->
+    <rule ref="Universal.Namespaces.DisallowCurlyBraceSyntax"/>
 
     <!-- Only one object structure per file. -->
     <rule ref="Generic.Files.OneObjectStructurePerFile"/>
+
+    <!-- And don't mix OO declarations and function declarations in one file. -->
+    <rule ref="Universal.Files.SeparateFunctionsFromOO"/>
 
     <!-- Disallow non-strict comparisons and the use of the not operator. -->
     <rule ref="Squiz.Operators.ComparisonOperatorUsage">
         <exclude name="Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue"/>
     </rule>
+
+    <!-- Enforce lowercase ::class. -->
+    <rule ref="Universal.Constants.LowercaseClassResolutionKeyword"/>
+
+    <!-- PHP native magic constants should be uppercase. -->
+    <rule ref="Universal.Constants.UppercaseMagicConstants"/>
+
+    <!-- Alphabetize lists of extended and implemented interfaces. -->
+    <rule ref="Universal.OOStructures.AlphabeticExtendsImplements"/>
+
+    <!-- Disallow the use of fully qualified true/false/null. -->
+    <rule ref="Universal.PHP.NoFQNTrueFalseNull"/>
+
+    <!-- Prevent really long lists with all (global) functions/constants used in a file. -->
+    <rule ref="Universal.UseStatements.DisallowUseConst"/>
+    <rule ref="Universal.UseStatements.DisallowUseFunction"/>
 
 
     <!--
@@ -165,6 +243,10 @@
     Code style: Array declarations.
     ####################################################################
     -->
+
+    <!-- This (incomplete) ruleset may cause some duplication for now, but that will be fixed once
+         the ruleset is completed and we can remove the `Squiz.Arrays.ArrayDeclaration` sniff. -->
+    <rule ref="NormalizedArrays"/>
 
     <!-- Enforce short array syntax. -->
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -228,9 +310,30 @@
 
     <!--
     ####################################################################
+    PHPCS compatibility additions.
+    ####################################################################
+    -->
+
+    <!-- The PHPCS autoloader does not handle sniffs which extends other sniffs well, so prevent problems by making all sniffs final. -->
+    <rule ref="Universal.Classes.RequireFinalClass"/>
+
+    <!-- Enforce methods in traits to be final to prevent (accidental) overloading. -->
+    <rule ref="Universal.FunctionDeclarations.RequireFinalMethodsInTraits"/>
+
+
+    <!--
+    ####################################################################
     Code Analysis additions.
     ####################################################################
     -->
+
+    <!-- Testability: long closures make for code which is more difficult to test. -->
+    <rule ref="Universal.FunctionDeclarations.NoLongClosures">
+        <!-- Disable the warning after 5 lines, only have the error after 8 lines. -->
+        <properties>
+            <property name="recommendedLines " value="1000"/>
+        </properties>
+    </rule>
 
     <!-- Efficiency: don't use function calls within the condition of a for loop. -->
     <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
@@ -244,6 +347,9 @@
     <!-- Efficiency: don't unnecessarily use heredocs. -->
     <rule ref="Generic.Strings.UnnecessaryHeredoc"/>
 
+    <!-- Efficiency: simplify code when possible. -->
+    <rule ref="Universal.CodeAnalysis.NoEchoSprintf"/>
+
     <!-- Error prevention: warns when an inner loop uses the same incrementor as the outer loop. -->
     <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
 
@@ -255,6 +361,36 @@
     <!-- Error prevention: use parentheses when mixing boolean operators. -->
     <rule ref="Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence"/>
 
+    <!-- Error prevention: Don't allow mixed arrays (keyed/non-keyed). -->
+    <rule ref="Universal.Arrays.MixedKeyedUnkeyedArray"/>
+
+    <!-- Error prevention: Don't allow mixed arrays (integer/string keys). -->
+    <rule ref="Universal.Arrays.MixedArrayKeyTypes"/>
+
+    <!-- Error prevention: Prevent issues with duplicate arrays keys. -->
+    <rule ref="Universal.Arrays.DuplicateArrayKey"/>
+
+    <!-- Error prevention: Prevent issues with precedent order. -->
+    <rule ref="Universal.Operators.DisallowLogicalAndOr"/>
+
+    <!-- Error prevention: Prevent logic errors as most devs don't understand short ternary well enough. -->
+    <rule ref="Universal.Operators.DisallowShortTernary"/>
+
+    <!-- Error prevention: Prevent issues when in/decremented variables get moved around and are suddenly no longer stand-alone. -->
+    <rule ref="Universal.Operators.DisallowStandalonePostIncrementDecrement"/>
+
+    <!-- Error prevention: Prevent creation of constructor/destructors which will not work as expected. -->
+    <rule ref="Universal.CodeAnalysis.ConstructorDestructorReturn"/>
+
+    <!-- Error prevention: Prevent unpredictable code behaviour. -->
+    <rule ref="Universal.CodeAnalysis.ForeachUniqueAssignment"/>
+
+    <!-- Error prevention: Prevent incomprehensible code. -->
+    <rule ref="Universal.CodeAnalysis.NoDoubleNegative"/>
+
+    <!-- Error prevention: don't allow people to do silly things. -->
+    <rule ref="Universal.PHP.OneStatementInShortEchoTag"/>
+
     <!-- Clean up: remove redundant code. -->
     <rule ref="Squiz.PHP.NonExecutableCode">
         <!-- Allow for return statement in otherwise empty function. -->
@@ -264,7 +400,16 @@
     <!-- Clean up: no empty statements. -->
     <rule ref="Generic.CodeAnalysis.EmptyPHPStatement"/>
 
+    <!-- Clean up: no lonely if statements. -->
+    <rule ref="Universal.ControlStructures.DisallowLonelyIf"/>
+
+    <!-- Clean up: no useless aliases in import use statements. -->
+    <rule ref="Universal.UseStatements.NoUselessAliases"/>
+
     <!-- Parse error prevention: guard against merge conflict artifacts. -->
     <rule ref="Generic.VersionControl.GitMergeConflict"/>
+
+    <!-- Lower cognitive load. -->
+    <rule ref="Universal.UseStatements.DisallowMixedGroupUse"/>
 
 </ruleset>
