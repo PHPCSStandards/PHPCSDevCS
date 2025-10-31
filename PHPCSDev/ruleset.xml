@@ -220,7 +220,8 @@
         <!-- Having a @see or @internal tag before the @category tag is fine. -->
         <exclude name="PEAR.Commenting.ClassComment.CategoryTagOrder"/>
 
-        <!-- Using @since for class changelog demands multiple tags. -->
+        <!-- Using @since for file/class changelog demands multiple tags. -->
+        <exclude name="PEAR.Commenting.FileComment.DuplicateSinceTag"/>
         <exclude name="PEAR.Commenting.ClassComment.DuplicateSinceTag"/>
     </rule>
 
