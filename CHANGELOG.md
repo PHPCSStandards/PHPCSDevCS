@@ -9,6 +9,71 @@ This projects adheres to [Keep a CHANGELOG](http://keepachangelog.com/) and uses
 
 _Nothing yet._
 
+## [1.2.0] - 2025-11-01
+
+### Added
+- New dependency: [PHPCSExtra].
+- The following sniffs have been added to the ruleset:
+    - `Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence`
+    - `Generic.Strings.UnnecessaryHeredoc`
+    - `Generic.WhiteSpace.HereNowdocIdentifierSpacing`
+    - `Squiz.Operators.ComparisonOperatorUsage` while excluding the `Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue` error code.
+    - `Modernize.FunctionCalls.Dirname` (`FileConstant` error code only)
+    - `NormalizedArrays.Arrays.ArrayBraceSpacing`
+    - `NormalizedArrays.Arrays.CommaAfterLast`
+    - `Universal.Arrays.DuplicateArrayKey`
+    - `Universal.Arrays.MixedArrayKeyTypes`
+    - `Universal.Arrays.MixedKeyedUnkeyedArray`
+    - `Universal.Classes.ModifierKeywordOrder`
+    - `Universal.Classes.RequireAnonClassParentheses`
+    - `Universal.Classes.RequireFinalClass`
+    - `Universal.CodeAnalysis.ConstructorDestructorReturn`
+    - `Universal.CodeAnalysis.ForeachUniqueAssignment`
+    - `Universal.CodeAnalysis.NoDoubleNegative`
+    - `Universal.CodeAnalysis.NoEchoSprintf`
+    - `Universal.CodeAnalysis.StaticInFinalClass`
+    - `Universal.Constants.LowercaseClassResolutionKeyword`
+    - `Universal.Constants.ModifierKeywordOrder`
+    - `Universal.Constants.UppercaseMagicConstants`
+    - `Universal.ControlStructures.DisallowAlternativeSyntax`
+    - `Universal.ControlStructures.DisallowLonelyIf`
+    - `Universal.Files.SeparateFunctionsFromOO`
+    - `Universal.FunctionDeclarations.NoLongClosures`
+    - `Universal.FunctionDeclarations.RequireFinalMethodsInTraits`
+    - `Universal.Namespaces.DisallowCurlyBraceSyntax`
+    - `Universal.Namespaces.OneDeclarationPerFile`
+    - `Universal.NamingConventions.NoReservedKeywordParameterNames`
+    - `Universal.OOStructures.AlphabeticExtendsImplements`
+    - `Universal.Operators.ConcatPosition`
+    - `Universal.Operators.DisallowLogicalAndOr`
+    - `Universal.Operators.DisallowShortTernary`
+    - `Universal.Operators.DisallowStandalonePostIncrementDecrement`
+    - `Universal.Operators.TypeSeparatorSpacing`
+    - `Universal.PHP.LowercasePHPTag`
+    - `Universal.PHP.NoFQNTrueFalseNull`
+    - `Universal.PHP.OneStatementInShortEchoTag`
+    - `Universal.UseStatements.DisallowMixedGroupUse`
+    - `Universal.UseStatements.DisallowUseConst`
+    - `Universal.UseStatements.DisallowUseFunction`
+    - `Universal.UseStatements.KeywordSpacing`
+    - `Universal.UseStatements.LowercaseFunctionConst`
+    - `Universal.UseStatements.NoLeadingBackslash`
+    - `Universal.UseStatements.NoUselessAliases`
+    - `Universal.WhiteSpace.AnonClassKeywordSpacing`
+    - `Universal.WhiteSpace.CommaSpacing`
+    - `Universal.WhiteSpace.PrecisionAlignment`
+
+Note: some of these additions may lead to duplicate messages for certain issues. If you come across this, please report the duplication.
+
+### Changed
+- Updated the version constraints for [PHP_CodeSniffer] to `^3.13.3 || ^4.0.0` (was `^3.6.2`).
+- Updated the version constraints for [PHPCompatibility] to `^10.0.0@dev` to benefit from hugely improved issue detection.
+    Includes excluding a number of additional error codes from the `PHPCompatibility.Constants.NewConstants` sniff to allow for polyfilled PHP tokens.
+- The `PSR12.ControlStructures.BooleanOperatorPlacement` will now enforce that boolean operators between two conditions on different lines will always be at the start of the second line.
+- The `PPSR12.Files.FileHeader.SpacingAfterTagBlock` error code (PHPCS 4.0+) has been excluded to allow for file docblocks to directly follow a PHP open tag at the top of a file.
+- The `PEAR.Commenting.FileComment.DuplicateSinceTag` error code has been excluded to allow for `@since` tags used as a changelog in file docblocks.
+- Various housekeeping, including a contribution from [@fredden].
+
 ## [1.1.6] - 2023-01-05
 
 ### Changed
@@ -66,10 +131,12 @@ _Nothing yet._
 Initial release.
 
 [Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer
-[PHP_CodeSniffer]:       https://github.com/PHPCSStandards/php_codesniffer/
+[PHP_CodeSniffer]:       https://github.com/PHPCSStandards/PHP_CodeSniffer
 [PHPCompatibility]:      https://github.com/PHPCompatibility/PHPCompatibility
+[PHPCSExtra]:            https://github.com/PHPCSStandards/PHPCSExtra
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/main...HEAD
+[1.2.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.6...1.2.0
 [1.1.6]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.3...1.1.4
@@ -78,4 +145,5 @@ Initial release.
 [1.1.1]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.0.0...1.1.0
 
+[@fredden]:   https://github.com/fredden
 [@GaryJones]: https://github.com/GaryJones
