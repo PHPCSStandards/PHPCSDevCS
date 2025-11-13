@@ -26,9 +26,6 @@
         "phpcompatibility/php-compatibility" : "^10.0.0@dev",
         "phpcsstandards/phpcsextra" : "^1.4.2"
     },
-    "require-dev" : {
-        "roave/security-advisories" : "dev-master"
-    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
