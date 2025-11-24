@@ -9,6 +9,18 @@ This projects adheres to [Keep a CHANGELOG](http://keepachangelog.com/) and uses
 
 _Nothing yet._
 
+## [1.3.0] - 2025-12-08
+
+### Added
+- The following sniffs have been added to the ruleset:
+    - `Universal.PHP.RequireExitDieParentheses`
+    - `Universal.WhiteSpace.FirstClassCallableSpacing`
+    - `Universal.Attributes.BracketSpacing`
+    - `Universal.Attributes.DisallowAttributeParentheses`
+
+### Changed
+- Various housekeeping.
+
 ## [1.2.0] - 2025-11-01
 
 ### Added
@@ -136,6 +148,7 @@ Initial release.
 [PHPCSExtra]:            https://github.com/PHPCSStandards/PHPCSExtra
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/main...HEAD
+[1.3.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.6...1.2.0
 [1.1.6]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.4...1.1.5
