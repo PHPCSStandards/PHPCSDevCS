@@ -237,6 +237,12 @@
     <rule ref="Universal.UseStatements.DisallowUseConst"/>
     <rule ref="Universal.UseStatements.DisallowUseFunction"/>
 
+    <!-- Require parentheses for exit/die. -->
+    <rule ref="Universal.PHP.RequireExitDieParentheses"/>
+
+    <!-- Require no spaces around the ellipses for first class callables. -->
+    <rule ref="Universal.WhiteSpace.FirstClassCallableSpacing"/>
+
 
     <!--
     ####################################################################
@@ -273,6 +279,18 @@
     <rule ref="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed">
         <severity>0</severity>
     </rule>
+
+
+    <!--
+    ####################################################################
+    Code style: Attributes.
+
+    These rules are eventually expected to be included in PERCS.
+    ####################################################################
+    -->
+
+    <rule ref="Universal.Attributes.BracketSpacing"/>
+    <rule ref="Universal.Attributes.DisallowAttributeParentheses"/>
 
 
     <!--
