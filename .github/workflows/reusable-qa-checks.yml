@@ -3,10 +3,14 @@ name: CI
 on:
   workflow_call:
 
+# Permissions should be configured at the job level.
 permissions: {}
 
 jobs:
   xmllint:
+    permissions:
+      contents: read # To clone the repo.
+
     name: 'Check install and XML'
     runs-on: ubuntu-latest
 
