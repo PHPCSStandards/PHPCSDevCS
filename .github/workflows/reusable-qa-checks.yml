@@ -67,3 +67,10 @@ jobs:
 
     name: 'Lint Markdown'
     uses: PHPCSStandards/.github/.github/workflows/reusable-markdownlint.yml@559f40470dbce9f7faeab31f82c0be7dfb93228e # v1.3.0
+
+  remark:
+    permissions:
+      contents: read # To clone the repo.
+
+    name: 'QA Markdown'
+    uses: PHPCSStandards/.github/.github/workflows/reusable-remark.yml@559f40470dbce9f7faeab31f82c0be7dfb93228e # v1.3.0
