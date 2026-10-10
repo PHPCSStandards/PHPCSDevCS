@@ -24,6 +24,8 @@ jobs:
         with:
           php-version: 'latest'
           coverage: none
+        env:
+          fail-fast: true
 
       # Install dependencies to make sure the PHPCS XSD file is available.
       - name: Install dependencies
