@@ -61,6 +61,13 @@ jobs:
     with:
       strict: true
 
+  pinact:
+    permissions:
+      contents: read # To clone the repo.
+
+    name: 'Run Pinact'
+    uses: PHPCSStandards/.github/.github/workflows/reusable-pinact.yml@559f40470dbce9f7faeab31f82c0be7dfb93228e # v1.3.0
+
   markdownlint:
     permissions:
       contents: read # To clone the repo.
