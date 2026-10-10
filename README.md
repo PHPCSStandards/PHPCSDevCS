@@ -1,18 +1,18 @@
 # PHPCSDevCS for developers of PHP_CodeSniffer sniffs
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/phpcsstandards/phpcsdevcs?label=stable)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
+[![Latest Stable Version](https://img.shields.io/packagist/v/phpcsstandards/phpcsdevcs?label=stable)][phpcsdevcs-packagist]
 [![Release Date of the Latest Version](https://img.shields.io/github/release-date/PHPCSStandards/PHPCSDevCS.svg?maxAge=1800)](https://github.com/PHPCSStandards/PHPCSDevCS/releases)
 :construction:
 [![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--main-e68718.svg?maxAge=2419200)](https://packagist.org/packages/phpcsstandards/phpcsdevcs#dev-main)
 [![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml/badge.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml)
 [![Last Commit to Unstable](https://img.shields.io/github/last-commit/PHPCSStandards/PHPCSDevCS/main.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/commits/main)
 
-[![Minimum PHP Version](https://img.shields.io/packagist/php-v/phpcsstandards/phpcsdevcs.svg?maxAge=3600)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
+[![Minimum PHP Version](https://img.shields.io/packagist/dependency-v/phpcsstandards/phpcsdevcs.svg?maxAge=3600)][phpcsdevcs-packagist]
 [![License: LGPLv3](https://img.shields.io/github/license/PHPCSStandards/PHPCSDevCS)](https://github.com/PHPCSStandards/PHPCSDevCS/blob/main/LICENSE)
 ![Awesome](https://img.shields.io/badge/awesome%3F-yes!-brightgreen.svg)
 
 
-This is an external ruleset for [PHP CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) intended for use by sniff developers.
+This is an external ruleset for [PHP CodeSniffer][phpcs-gh] intended for use by sniff developers.
 
 * [Installation](#installation)
     + [Composer Project-based Installation](#composer-project-based-installation)
@@ -96,3 +96,6 @@ If unsure whether the changes you are proposing would be welcome, open an issue 
 ## License
 
 This code is released under the GNU Lesser General Public License (LGPLv3). For more information, visit <http://www.gnu.org/copyleft/lesser.html>.
+
+[phpcsdevcs-packagist]: https://packagist.org/packages/phpcsstandards/phpcsdevcs
+[phpcs-gh]:             https://github.com/PHPCSStandards/PHP_CodeSniffer
