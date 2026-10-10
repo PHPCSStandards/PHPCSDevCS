@@ -1,5 +1,4 @@
-PHPCSDevCS for developers of PHP_CodeSniffer sniffs
-=====================================================
+# PHPCSDevCS for developers of PHP_CodeSniffer sniffs
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/phpcsstandards/phpcsdevcs?label=stable)](https://packagist.org/packages/phpcsstandards/phpcsdevcs)
 [![Release Date of the Latest Version](https://img.shields.io/github/release-date/PHPCSStandards/PHPCSDevCS.svg?maxAge=1800)](https://github.com/PHPCSStandards/PHPCSDevCS/releases)
@@ -25,8 +24,7 @@ This is an external ruleset for [PHP CodeSniffer](https://github.com/PHPCSStanda
 * [License](#license)
 
 
-Installation
--------------------------------------------
+## Installation
 
 ### Composer Project-based Installation
 
@@ -47,8 +45,7 @@ composer global require --dev phpcsstandards/phpcsdevcs:"^1.0"
 Composer will automatically install dependencies and register the PHPCSDev and other external standards with PHP_CodeSniffer using the [Composer PHPCS plugin](https://github.com/PHPCSStandards/composer-installer).
 
 
-PHPCSDev ruleset for sniff repos
-------------------------------
+## PHPCSDev ruleset for sniff repos
 
 Once this project is installed, you will see a new `PHPCSDev` ruleset in the list of installed standards when you run `phpcs -i`.
 
@@ -77,6 +74,7 @@ The standard checks your code against the following:
 The ruleset can be used like any other ruleset and specific sniffs and settings can be added to or overruled from a custom project based ruleset.
 
 ### Using the ruleset from the command line
+
 ```bash
 phpcs . --standard=PHPCSDev
 ```
@@ -89,12 +87,12 @@ Add the following line to your project's `phpcs.xml.dist` file:
 ```
 
 
-Contributing
--------
+## Contributing
+
 Contributions to this project are welcome. Just clone the repo, branch off from `main`, make your changes, commit them and send in a pull request.
 
 If unsure whether the changes you are proposing would be welcome, open an issue first to discuss your proposal.
 
-License
--------
-This code is released under the GNU Lesser General Public License (LGPLv3). For more information, visit http://www.gnu.org/copyleft/lesser.html
+## License
+
+This code is released under the GNU Lesser General Public License (LGPLv3). For more information, visit <http://www.gnu.org/copyleft/lesser.html>.
