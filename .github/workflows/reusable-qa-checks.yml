@@ -51,3 +51,12 @@ jobs:
       # Note: this needs xmllint, but that will be installed via the phpcsstandards/xmllint-validate action runner.
       - name: Check code style
         run: diff -B ./PHPCSDev/ruleset.xml <(xmllint --format "./PHPCSDev/ruleset.xml")
+
+  yamllint:
+    permissions:
+      contents: read # To clone the repo.
+
+    name: 'Lint Yaml'
+    uses: PHPCSStandards/.github/.github/workflows/reusable-yamllint.yml@559f40470dbce9f7faeab31f82c0be7dfb93228e # v1.3.0
+    with:
+      strict: true
