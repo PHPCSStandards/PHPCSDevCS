@@ -12,20 +12,23 @@ _Nothing yet._
 ## [1.3.0] - 2025-12-08
 
 ### Added
-- The following sniffs have been added to the ruleset:
+
+* The following sniffs have been added to the ruleset:
     - `Universal.PHP.RequireExitDieParentheses`
     - `Universal.WhiteSpace.FirstClassCallableSpacing`
     - `Universal.Attributes.BracketSpacing`
     - `Universal.Attributes.DisallowAttributeParentheses`
 
 ### Changed
-- Various housekeeping.
+
+* Various housekeeping.
 
 ## [1.2.0] - 2025-11-01
 
 ### Added
-- New dependency: [PHPCSExtra].
-- The following sniffs have been added to the ruleset:
+
+* New dependency: [PHPCSExtra].
+* The following sniffs have been added to the ruleset:
     - `Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence`
     - `Generic.Strings.UnnecessaryHeredoc`
     - `Generic.WhiteSpace.HereNowdocIdentifierSpacing`
@@ -78,65 +81,75 @@ _Nothing yet._
 Note: some of these additions may lead to duplicate messages for certain issues. If you come across this, please report the duplication.
 
 ### Changed
-- Updated the version constraints for [PHP_CodeSniffer] to `^3.13.3 || ^4.0.0` (was `^3.6.2`).
-- Updated the version constraints for [PHPCompatibility] to `^10.0.0@dev` to benefit from hugely improved issue detection.
+
+* Updated the version constraints for [PHP_CodeSniffer] to `^3.13.3 || ^4.0.0` (was `^3.6.2`).
+* Updated the version constraints for [PHPCompatibility] to `^10.0.0@dev` to benefit from hugely improved issue detection.
     Includes excluding a number of additional error codes from the `PHPCompatibility.Constants.NewConstants` sniff to allow for polyfilled PHP tokens.
-- The `PSR12.ControlStructures.BooleanOperatorPlacement` will now enforce that boolean operators between two conditions on different lines will always be at the start of the second line.
-- The `PPSR12.Files.FileHeader.SpacingAfterTagBlock` error code (PHPCS 4.0+) has been excluded to allow for file docblocks to directly follow a PHP open tag at the top of a file.
-- The `PEAR.Commenting.FileComment.DuplicateSinceTag` error code has been excluded to allow for `@since` tags used as a changelog in file docblocks.
-- Various housekeeping, including a contribution from [@fredden].
+* The `PSR12.ControlStructures.BooleanOperatorPlacement` will now enforce that boolean operators between two conditions on different lines will always be at the start of the second line.
+* The `PPSR12.Files.FileHeader.SpacingAfterTagBlock` error code (PHPCS 4.0+) has been excluded to allow for file docblocks to directly follow a PHP open tag at the top of a file.
+* The `PEAR.Commenting.FileComment.DuplicateSinceTag` error code has been excluded to allow for `@since` tags used as a changelog in file docblocks.
+* Various housekeeping, including a contribution from [@fredden].
 
 ## [1.1.6] - 2023-01-05
 
 ### Changed
+
 * Composer: The version requirements for the [Composer PHPCS plugin] have been widened to allow for version 1.0.0.
     Please ensure you run `composer update phpcsstandards/phpcsdevcs --with-dependencies` to benefit from this.
 
 ## [1.1.5] - 2022-10-14
 
 ### Changed
-- Composer: The package will now identify itself as a static analysis tool. Thanks [@GaryJones]!
-- Minor housekeeping.
+
+* Composer: The package will now identify itself as a static analysis tool. Thanks [@GaryJones]!
+* Minor housekeeping.
 
 ## [1.1.4] - 2022-04-21
 
 ### Changed
-- A few PHP 8.1 token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff have been excluded as the constants have been backfilled by PHPCS.
-- README: Updated the installation instructions for [compatibility with Composer 2.2][composer22announce].
-- Various other housekeeping and minor documentation updates.
+
+* A few PHP 8.1 token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff have been excluded as the constants have been backfilled by PHPCS.
+* README: Updated the installation instructions for [compatibility with Composer 2.2][composer22announce].
+* Various other housekeeping and minor documentation updates.
 
 [composer22announce]: https://blog.packagist.com/composer-2-2/#more-secure-plugin-execution
 
 ## [1.1.3] - 2021-12-23
 
 ### Changed
-- Updated the version constraints for [PHP_CodeSniffer] to `^3.6.2`.
-- CI is now running on GitHub Actions.
+
+* Updated the version constraints for [PHP_CodeSniffer] to `^3.6.2`.
+* CI is now running on GitHub Actions.
 
 ### Fixed
-- To prevent conflicting expectations between a newly introduced PSR12 sniff and this ruleset as it was, the new `PSR12.Classes.OpeningBraceSpace` sniff will be ignored.
+
+* To prevent conflicting expectations between a newly introduced PSR12 sniff and this ruleset as it was, the new `PSR12.Classes.OpeningBraceSpace` sniff will be ignored.
 
 ## [1.1.2] - 2020-12-01
 
 ### Changed
-- A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff are excluded as the constants have been backfilled by PHPCS.
+
+* A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` sniff are excluded as the constants have been backfilled by PHPCS.
 
 ## [1.1.1] - 2020-09-03
 
 ### Changed
-- A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` and `PHPCompatibility.Constants.RemovedConstants` sniffs are excluded as the constants are, or soon will be, backfilled by PHPCS.
-- Updated the version constraints for the [PHPCompatibility] standard to allow for installing version `10.0` (currently in dev).
+
+* A few more token constant error codes for the `PHPCompatibility.Constants.NewConstants` and `PHPCompatibility.Constants.RemovedConstants` sniffs are excluded as the constants are, or soon will be, backfilled by PHPCS.
+* Updated the version constraints for the [PHPCompatibility] standard to allow for installing version `10.0` (currently in dev).
 
 ## [1.1.0] - 2020-09-03
 
 ### Added
-- Short array syntax is now required by default via the `Generic.Arrays.DisallowLongArraySyntax` sniff.
+
+* Short array syntax is now required by default via the `Generic.Arrays.DisallowLongArraySyntax` sniff.
 
 ### Changed
-- The `Squiz.PHP.NonExecutableCode.ReturnNotRequired` code is excluded to allow for a `return` statement in an otherwise empty function (typical use: overloadable methods in an abstract class).
-- The `PHPCompatibility.Constants.NewConstants.t_fnFound` code is excluded as the constant is backfilled by PHPCS since PHPCS 3.5.3.
-- Updated the version constraints for the [Composer PHPCS plugin]. The minimum supported version is now `0.4.1`, while the maximum is `^0.7` (latest release).
-- Updated the inline ruleset documentation.
+
+* The `Squiz.PHP.NonExecutableCode.ReturnNotRequired` code is excluded to allow for a `return` statement in an otherwise empty function (typical use: overloadable methods in an abstract class).
+* The `PHPCompatibility.Constants.NewConstants.t_fnFound` code is excluded as the constant is backfilled by PHPCS since PHPCS 3.5.3.
+* Updated the version constraints for the [Composer PHPCS plugin]. The minimum supported version is now `0.4.1`, while the maximum is `^0.7` (latest release).
+* Updated the inline ruleset documentation.
 
 ## 1.0.0 - 2020-02-12
 
