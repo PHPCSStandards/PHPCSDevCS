@@ -14,7 +14,8 @@
             "skipUrlPatterns": [
                 "^https?://github\\.com/PHPCSStandards/PHPCSDevCS/compare/[0-9\\.]+?\\.{3}[0-9\\.]+",
                 "^https?://github\\.com/PHPCSStandards/PHPCSDevCS/commits/main",
-                "^https?://packagist\\.org/packages/phpcsstandards/phpcsdevcs#dev-main"
+                "^https?://packagist\\.org/packages/phpcsstandards/phpcsdevcs#dev-main",
+                "^https?://www\\.gnu\\.org/copyleft/lesser\\.html"
             ],
             "deadOrAliveOptions": {
                 "maxRetries": 3
