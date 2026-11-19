@@ -35,6 +35,7 @@
         <exclude name="PHPCompatibility.Constants.NewConstants.t_public_setFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_protected_setFound"/>
         <exclude name="PHPCompatibility.Constants.NewConstants.t_private_setFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.t_void_castFound"/>
         <exclude name="PHPCompatibility.Constants.RemovedConstants.t_bad_characterFound"/>
     </rule>
 
