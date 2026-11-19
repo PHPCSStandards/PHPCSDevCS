@@ -7,7 +7,7 @@
 [![Build Status](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml/badge.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/actions/workflows/ci.yml)
 [![Last Commit to Unstable](https://img.shields.io/github/last-commit/PHPCSStandards/PHPCSDevCS/main.svg)](https://github.com/PHPCSStandards/PHPCSDevCS/commits/main)
 
-[![Minimum PHP Version](https://img.shields.io/packagist/dependency-v/phpcsstandards/phpcsdevcs.svg?maxAge=3600)][phpcsdevcs-packagist]
+[![Minimum PHP Version](https://img.shields.io/packagist/dependency-v/phpcsstandards/phpcsdevcs/php)][phpcsdevcs-packagist]
 [![License: LGPLv3](https://img.shields.io/github/license/PHPCSStandards/PHPCSDevCS)](https://github.com/PHPCSStandards/PHPCSDevCS/blob/main/LICENSE)
 ![Awesome](https://img.shields.io/badge/awesome%3F-yes!-brightgreen.svg)
 
