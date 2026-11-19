@@ -9,6 +9,18 @@ This projects adheres to [Keep a CHANGELOG](https://keepachangelog.com/) and use
 
 _Nothing yet._
 
+## [1.3.1] - 2026-11-19
+
+### Added
+
+* Exclusion for the PHPCS polyfilled `T_VOID_CAST` token, usage of which would otherwise be flagged by PHPCompatibility 10.0.0-alpha3.
+
+### Changed
+
+* Updated the version constraints for [PHP_CodeSniffer] to `^3.13.6 || ^4.0.2` (was `^3.13.3 || ^4.0.0`).
+* Updated the version constraints for [PHPCSExtra] to `^1.5.1` (was `^1.5.0`).
+* Various housekeeping.
+
 ## [1.3.0] - 2025-12-08
 
 ### Added
@@ -21,6 +33,8 @@ _Nothing yet._
 
 ### Changed
 
+* Updated the version constraints for [PHP_CodeSniffer] to `^3.13.5 || ^4.0.1` (was `^3.13.3 || ^4.0.0`).
+* Updated the version constraints for [PHPCSExtra] to `^1.5.0` (was `^1.4.2`).
 * Various housekeeping.
 
 ## [1.2.0] - 2025-11-01
@@ -161,6 +175,7 @@ Initial release.
 [PHPCSExtra]:            https://github.com/PHPCSStandards/PHPCSExtra
 
 [Unreleased]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/main...HEAD
+[1.3.1]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.6...1.2.0
 [1.1.6]: https://github.com/PHPCSStandards/PHPCSDevCS/compare/1.1.5...1.1.6
